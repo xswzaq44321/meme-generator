@@ -28,14 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage_image = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel_img = new System.Windows.Forms.TableLayoutPanel();
 			this.radioButton_just_do_it = new System.Windows.Forms.RadioButton();
-			this.radioButton_excuse_me = new System.Windows.Forms.RadioButton();
 			this.radioButton_evil_patrick = new System.Windows.Forms.RadioButton();
+			this.radioButton_excuse_me = new System.Windows.Forms.RadioButton();
 			this.radioButton_doge = new System.Windows.Forms.RadioButton();
 			this.tabPage_font_style = new System.Windows.Forms.TabPage();
 			this.button_size_down = new System.Windows.Forms.Button();
@@ -55,7 +53,6 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.pictureBox_meme = new System.Windows.Forms.PictureBox();
 			this.label_meme = new System.Windows.Forms.Label();
-			this.imageList_meme = new System.Windows.Forms.ImageList(this.components);
 			this.tabControl1.SuspendLayout();
 			this.tabPage_image.SuspendLayout();
 			this.tableLayoutPanel_img.SuspendLayout();
@@ -92,19 +89,21 @@
 			// 
 			// tableLayoutPanel_img
 			// 
-			this.tableLayoutPanel_img.ColumnCount = 2;
-			this.tableLayoutPanel_img.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel_img.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel_img.AutoScroll = true;
+			this.tableLayoutPanel_img.ColumnCount = 1;
+			this.tableLayoutPanel_img.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel_img.Controls.Add(this.radioButton_just_do_it, 0, 0);
-			this.tableLayoutPanel_img.Controls.Add(this.radioButton_excuse_me, 1, 0);
-			this.tableLayoutPanel_img.Controls.Add(this.radioButton_evil_patrick, 0, 1);
-			this.tableLayoutPanel_img.Controls.Add(this.radioButton_doge, 1, 1);
-			this.tableLayoutPanel_img.Location = new System.Drawing.Point(54, 31);
+			this.tableLayoutPanel_img.Controls.Add(this.radioButton_doge, 0, 3);
+			this.tableLayoutPanel_img.Controls.Add(this.radioButton_evil_patrick, 0, 2);
+			this.tableLayoutPanel_img.Controls.Add(this.radioButton_excuse_me, 0, 1);
+			this.tableLayoutPanel_img.Location = new System.Drawing.Point(6, 6);
 			this.tableLayoutPanel_img.Name = "tableLayoutPanel_img";
-			this.tableLayoutPanel_img.RowCount = 2;
-			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel_img.Size = new System.Drawing.Size(442, 70);
+			this.tableLayoutPanel_img.RowCount = 4;
+			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_img.Size = new System.Drawing.Size(544, 125);
 			this.tableLayoutPanel_img.TabIndex = 1;
 			// 
 			// radioButton_just_do_it
@@ -116,48 +115,44 @@
 			this.radioButton_just_do_it.Size = new System.Drawing.Size(82, 20);
 			this.radioButton_just_do_it.TabIndex = 0;
 			this.radioButton_just_do_it.TabStop = true;
-			this.radioButton_just_do_it.Text = "Just Do It";
+			this.radioButton_just_do_it.Text = "just_do_it";
 			this.radioButton_just_do_it.UseVisualStyleBackColor = true;
-			this.radioButton_just_do_it.CheckedChanged += new System.EventHandler(this.radioButton_just_do_it_CheckedChanged);
-			// 
-			// radioButton_excuse_me
-			// 
-			this.radioButton_excuse_me.AutoSize = true;
-			this.radioButton_excuse_me.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_excuse_me.Location = new System.Drawing.Point(224, 3);
-			this.radioButton_excuse_me.Name = "radioButton_excuse_me";
-			this.radioButton_excuse_me.Size = new System.Drawing.Size(88, 20);
-			this.radioButton_excuse_me.TabIndex = 1;
-			this.radioButton_excuse_me.TabStop = true;
-			this.radioButton_excuse_me.Text = "Excuse Me";
-			this.radioButton_excuse_me.UseVisualStyleBackColor = true;
-			this.radioButton_excuse_me.CheckedChanged += new System.EventHandler(this.radioButton_excuse_me_CheckedChanged);
 			// 
 			// radioButton_evil_patrick
 			// 
 			this.radioButton_evil_patrick.AutoSize = true;
 			this.radioButton_evil_patrick.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_evil_patrick.Location = new System.Drawing.Point(3, 38);
+			this.radioButton_evil_patrick.Location = new System.Drawing.Point(3, 55);
 			this.radioButton_evil_patrick.Name = "radioButton_evil_patrick";
-			this.radioButton_evil_patrick.Size = new System.Drawing.Size(90, 20);
+			this.radioButton_evil_patrick.Size = new System.Drawing.Size(92, 20);
 			this.radioButton_evil_patrick.TabIndex = 2;
 			this.radioButton_evil_patrick.TabStop = true;
-			this.radioButton_evil_patrick.Text = "Evil Patrick";
+			this.radioButton_evil_patrick.Text = "evil_patrick";
 			this.radioButton_evil_patrick.UseVisualStyleBackColor = true;
-			this.radioButton_evil_patrick.CheckedChanged += new System.EventHandler(this.radioButton_evil_patrick_CheckedChanged);
+			// 
+			// radioButton_excuse_me
+			// 
+			this.radioButton_excuse_me.AutoSize = true;
+			this.radioButton_excuse_me.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.radioButton_excuse_me.Location = new System.Drawing.Point(3, 29);
+			this.radioButton_excuse_me.Name = "radioButton_excuse_me";
+			this.radioButton_excuse_me.Size = new System.Drawing.Size(113, 20);
+			this.radioButton_excuse_me.TabIndex = 1;
+			this.radioButton_excuse_me.TabStop = true;
+			this.radioButton_excuse_me.Text = "excuse_me_wtf";
+			this.radioButton_excuse_me.UseVisualStyleBackColor = true;
 			// 
 			// radioButton_doge
 			// 
 			this.radioButton_doge.AutoSize = true;
 			this.radioButton_doge.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_doge.Location = new System.Drawing.Point(224, 38);
+			this.radioButton_doge.Location = new System.Drawing.Point(3, 81);
 			this.radioButton_doge.Name = "radioButton_doge";
-			this.radioButton_doge.Size = new System.Drawing.Size(58, 20);
+			this.radioButton_doge.Size = new System.Drawing.Size(57, 20);
 			this.radioButton_doge.TabIndex = 3;
 			this.radioButton_doge.TabStop = true;
-			this.radioButton_doge.Text = "Doge";
+			this.radioButton_doge.Text = "doge";
 			this.radioButton_doge.UseVisualStyleBackColor = true;
-			this.radioButton_doge.CheckedChanged += new System.EventHandler(this.radioButton_doge_CheckedChanged);
 			// 
 			// tabPage_font_style
 			// 
@@ -276,6 +271,7 @@
 			// 
 			// tableLayoutPanel_sentence
 			// 
+			this.tableLayoutPanel_sentence.AutoScroll = true;
 			this.tableLayoutPanel_sentence.ColumnCount = 1;
 			this.tableLayoutPanel_sentence.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel_sentence.Controls.Add(this.radioButton_want_some, 0, 0);
@@ -285,10 +281,10 @@
 			this.tableLayoutPanel_sentence.Location = new System.Drawing.Point(6, 6);
 			this.tableLayoutPanel_sentence.Name = "tableLayoutPanel_sentence";
 			this.tableLayoutPanel_sentence.RowCount = 4;
-			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_sentence.Size = new System.Drawing.Size(544, 128);
 			this.tableLayoutPanel_sentence.TabIndex = 0;
 			// 
@@ -308,7 +304,7 @@
 			// 
 			this.radioButton_mom.AutoSize = true;
 			this.radioButton_mom.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_mom.Location = new System.Drawing.Point(3, 35);
+			this.radioButton_mom.Location = new System.Drawing.Point(3, 29);
 			this.radioButton_mom.Name = "radioButton_mom";
 			this.radioButton_mom.Size = new System.Drawing.Size(195, 20);
 			this.radioButton_mom.TabIndex = 1;
@@ -320,7 +316,7 @@
 			// 
 			this.radioButton_the_moment.AutoSize = true;
 			this.radioButton_the_moment.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_the_moment.Location = new System.Drawing.Point(3, 67);
+			this.radioButton_the_moment.Location = new System.Drawing.Point(3, 55);
 			this.radioButton_the_moment.Name = "radioButton_the_moment";
 			this.radioButton_the_moment.Size = new System.Drawing.Size(251, 20);
 			this.radioButton_the_moment.TabIndex = 2;
@@ -332,7 +328,7 @@
 			// 
 			this.radioButton_professor.AutoSize = true;
 			this.radioButton_professor.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_professor.Location = new System.Drawing.Point(3, 99);
+			this.radioButton_professor.Location = new System.Drawing.Point(3, 81);
 			this.radioButton_professor.Name = "radioButton_professor";
 			this.radioButton_professor.Size = new System.Drawing.Size(261, 20);
 			this.radioButton_professor.TabIndex = 3;
@@ -372,7 +368,7 @@
 			this.pictureBox_meme.Location = new System.Drawing.Point(3, 84);
 			this.pictureBox_meme.Name = "pictureBox_meme";
 			this.pictureBox_meme.Size = new System.Drawing.Size(554, 319);
-			this.pictureBox_meme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pictureBox_meme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox_meme.TabIndex = 0;
 			this.pictureBox_meme.TabStop = false;
 			// 
@@ -386,15 +382,6 @@
 			this.label_meme.Size = new System.Drawing.Size(0, 34);
 			this.label_meme.TabIndex = 1;
 			// 
-			// imageList_meme
-			// 
-			this.imageList_meme.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_meme.ImageStream")));
-			this.imageList_meme.TransparentColor = System.Drawing.Color.Transparent;
-			this.imageList_meme.Images.SetKeyName(0, "doge");
-			this.imageList_meme.Images.SetKeyName(1, "evil_patrick");
-			this.imageList_meme.Images.SetKeyName(2, "excuse_me_wtf");
-			this.imageList_meme.Images.SetKeyName(3, "just_do_it");
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -406,7 +393,7 @@
 			this.KeyPreview = true;
 			this.MinimumSize = new System.Drawing.Size(300, 300);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "meme generator";
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage_image.ResumeLayout(false);
 			this.tableLayoutPanel_img.ResumeLayout(false);
@@ -437,8 +424,6 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_img;
 		private System.Windows.Forms.RadioButton radioButton_just_do_it;
 		private System.Windows.Forms.RadioButton radioButton_excuse_me;
-		private System.Windows.Forms.RadioButton radioButton_evil_patrick;
-		private System.Windows.Forms.RadioButton radioButton_doge;
 		private System.Windows.Forms.Button button_size_down;
 		private System.Windows.Forms.Button button_size_up;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -451,7 +436,8 @@
 		private System.Windows.Forms.RadioButton radioButton_mom;
 		private System.Windows.Forms.RadioButton radioButton_the_moment;
 		private System.Windows.Forms.RadioButton radioButton_professor;
-		private System.Windows.Forms.ImageList imageList_meme;
+		private System.Windows.Forms.RadioButton radioButton_evil_patrick;
+		private System.Windows.Forms.RadioButton radioButton_doge;
 	}
 }
 

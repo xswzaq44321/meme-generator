@@ -45,6 +45,7 @@
 			// 
 			// textBox_command
 			// 
+			this.textBox_command.AllowDrop = true;
 			this.textBox_command.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox_command.Location = new System.Drawing.Point(12, 327);
 			this.textBox_command.Name = "textBox_command";
@@ -60,7 +61,7 @@
 			this.Controls.Add(this.textBox_command);
 			this.Controls.Add(this.richTextBox_message);
 			this.Name = "Form2";
-			this.Text = "Form2";
+			this.Text = "Lua console";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
 			this.ResumeLayout(false);
 			this.PerformLayout();

@@ -60,12 +60,14 @@ namespace Practice_5_2
 				if (prevCommands.Count == 0)
 					return;
 				me.Text = prevCommands[prevCommandsIter == 0 ? 0 : prevCommandsIter--];
+				textBox_command.SelectionStart = textBox_command.TextLength;
 			}
 			else if (e.KeyCode == Keys.Down)
 			{
 				if (prevCommands.Count == 0)
 					return;
 				me.Text = prevCommandsIter == prevCommands.Count - 1 ? "" : prevCommands[++prevCommandsIter];
+				textBox_command.SelectionStart = textBox_command.TextLength;
 			}
 		}
 
