@@ -73,13 +73,13 @@ namespace Practice_5_2
 
 		private void addImage(string path, string name)
 		{
-			System.Diagnostics.Debug.WriteLine(path);
+			Bitmap image = new Bitmap(path);
 			RadioButton img = new RadioButton();
 			img.Text = name;
 			img.Font = new Font("Microsoft JhengHei", 9, FontStyle.Bold);
 			img.AutoSize = true;
 			imgSelectList.Add(img);
-			img.CheckedChanged += (s, e) => pictureBox_meme.Image = new Bitmap(path);
+			img.CheckedChanged += (s, e) => pictureBox_meme.Image = image;
 			tableLayoutPanel_img.RowCount++;
 			tableLayoutPanel_img.Controls.Add(img, 1, tableLayoutPanel_img.RowCount);
 		}

@@ -34,32 +34,40 @@
 			// 
 			// richTextBox_message
 			// 
+			this.richTextBox_message.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.richTextBox_message.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.richTextBox_message.Location = new System.Drawing.Point(12, 12);
+			this.richTextBox_message.Location = new System.Drawing.Point(18, 13);
+			this.richTextBox_message.Margin = new System.Windows.Forms.Padding(4);
 			this.richTextBox_message.Name = "richTextBox_message";
 			this.richTextBox_message.ReadOnly = true;
 			this.richTextBox_message.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-			this.richTextBox_message.Size = new System.Drawing.Size(460, 309);
+			this.richTextBox_message.Size = new System.Drawing.Size(688, 480);
 			this.richTextBox_message.TabIndex = 0;
 			this.richTextBox_message.Text = "";
 			// 
 			// textBox_command
 			// 
 			this.textBox_command.AllowDrop = true;
+			this.textBox_command.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox_command.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_command.Location = new System.Drawing.Point(12, 327);
+			this.textBox_command.Location = new System.Drawing.Point(18, 501);
+			this.textBox_command.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.textBox_command.Name = "textBox_command";
-			this.textBox_command.Size = new System.Drawing.Size(460, 21);
+			this.textBox_command.Size = new System.Drawing.Size(688, 28);
 			this.textBox_command.TabIndex = 1;
 			this.textBox_command.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_command_KeyDown);
 			// 
 			// Form2
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(484, 361);
+			this.ClientSize = new System.Drawing.Size(726, 542);
 			this.Controls.Add(this.textBox_command);
 			this.Controls.Add(this.richTextBox_message);
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.Name = "Form2";
 			this.Text = "Lua console";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
