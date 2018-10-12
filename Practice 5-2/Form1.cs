@@ -25,6 +25,7 @@ namespace Practice_5_2
 			imgSelectList.Add(radioButton_evil_patrick);
 			imgSelectList.Add(radioButton_excuse_me);
 			imgSelectList.Add(radioButton_doge);
+			radioButton_Regular.Checked = true;
 
 			int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
 			tableLayoutPanel_sentence.Padding = new Padding(0, 0, vertScrollWidth, 0);
@@ -36,7 +37,8 @@ namespace Practice_5_2
 			}
 			foreach(RadioButton i in imgSelectList)
 			{
-				i.CheckedChanged += (s, e) => pictureBox_meme.Image = (Image)Resource.ResourceManager.GetObject(((RadioButton)s).Text);
+				Image img = (Image)Resource.ResourceManager.GetObject(i.Text);
+				i.CheckedChanged += (s, e) => pictureBox_meme.Image = img;
 			}
 			
 			myConsole.script.Globals["addSentence"] = (Action<string>)(addSentence);
@@ -45,7 +47,6 @@ namespace Practice_5_2
 
 		Random rand = new Random();
 		Form2 myConsole = new Form2();
-		List<Image> imgList = new List<Image>();
 		List<RadioButton> sentenceList = new List<RadioButton>();
 		List<RadioButton> imgSelectList = new List<RadioButton>();
 
@@ -73,6 +74,10 @@ namespace Practice_5_2
 
 		private void addImage(string path, string name)
 		{
+			if (name == null)
+			{ // default image name
+				name = "img" + (imgSelectList.Count + 1);
+			}
 			Bitmap image = new Bitmap(path);
 			RadioButton img = new RadioButton();
 			img.Text = name;
@@ -130,16 +135,17 @@ namespace Practice_5_2
 
 		private void button_export_Click(object sender, EventArgs e)
 		{
+			if (pictureBox_meme.Image == null)
+				return;
 			Image img = pictureBox_meme.Image;
 			float scaleHeight = (float)pictureBox_meme.Height / (float)img.Height;
 			float scaleWidth = (float)pictureBox_meme.Width / (float)img.Width;
 			float scale = Math.Min(scaleHeight, scaleWidth);
 			img = new Bitmap(img, (int)(img.Width * scale), (int)(img.Height * scale));
 			SizeF sentSize = label_meme.CreateGraphics().MeasureString(label_meme.Text, label_meme.Font);
-			SizeF imgSize = img.Size;
 			Padding sentPadding = new Padding(0, 20, 0, 20);
 
-			Bitmap canvas = new Bitmap((int)Math.Max(imgSize.Width, sentSize.Width + sentPadding.Left + sentPadding.Right), (int)(imgSize.Height + sentSize.Height + sentPadding.Top + sentPadding.Bottom));
+			Bitmap canvas = new Bitmap((int)Math.Max(img.Width, sentSize.Width + sentPadding.Left + sentPadding.Right), (int)(img.Height + sentSize.Height + sentPadding.Top + sentPadding.Bottom));
 			Graphics graphic = Graphics.FromImage(canvas);
 			graphic.Clear(Color.White);
 			graphic.DrawString(label_meme.Text, label_meme.Font, Brushes.Black, (canvas.Width - (sentPadding.Left + sentSize.Width + sentPadding.Right)) / 2 + sentPadding.Left, sentPadding.Top);
