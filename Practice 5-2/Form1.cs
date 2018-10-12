@@ -127,5 +127,45 @@ namespace Practice_5_2
 			sentenceList[num].PerformClick();
 			sentenceList[num].Checked = true;
 		}
+
+		private void button_export_Click(object sender, EventArgs e)
+		{
+			Image img = pictureBox_meme.Image;
+			float scaleHeight = (float)pictureBox_meme.Height / (float)img.Height;
+			float scaleWidth = (float)pictureBox_meme.Width / (float)img.Width;
+			float scale = Math.Min(scaleHeight, scaleWidth);
+			img = new Bitmap(img, (int)(img.Width * scale), (int)(img.Height * scale));
+			SizeF sentSize = label_meme.CreateGraphics().MeasureString(label_meme.Text, label_meme.Font);
+			SizeF imgSize = img.Size;
+			Padding sentPadding = new Padding(0, 20, 0, 20);
+
+			Bitmap canvas = new Bitmap((int)Math.Max(imgSize.Width, sentSize.Width + sentPadding.Left + sentPadding.Right), (int)(imgSize.Height + sentSize.Height + sentPadding.Top + sentPadding.Bottom));
+			Graphics graphic = Graphics.FromImage(canvas);
+			graphic.Clear(Color.White);
+			graphic.DrawString(label_meme.Text, label_meme.Font, Brushes.Black, (canvas.Width - (sentPadding.Left + sentSize.Width + sentPadding.Right)) / 2 + sentPadding.Left, sentPadding.Top);
+			graphic.DrawImage(img, (canvas.Width - img.Width) / 2, sentPadding.Top + sentSize.Height + sentPadding.Bottom);
+
+			saveFileDialog1.ShowDialog();
+			if(saveFileDialog1.FileName != "")
+			{
+				System.IO.FileStream fs = (System.IO.FileStream)saveFileDialog1.OpenFile();
+				switch (saveFileDialog1.FilterIndex)
+				{
+					case 1: // jpeg
+						canvas.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+						break;
+					case 2: // bmp
+						canvas.Save(fs, System.Drawing.Imaging.ImageFormat.Bmp);
+						break;
+					case 3: // gif
+						canvas.Save(fs, System.Drawing.Imaging.ImageFormat.Gif);
+						break;
+					case 4: // png
+						canvas.Save(fs, System.Drawing.Imaging.ImageFormat.Png);
+						break;
+				}
+				fs.Close();
+			}
+		}
 	}
 }

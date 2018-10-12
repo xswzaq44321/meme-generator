@@ -32,9 +32,9 @@
 			this.tabPage_image = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel_img = new System.Windows.Forms.TableLayoutPanel();
 			this.radioButton_just_do_it = new System.Windows.Forms.RadioButton();
+			this.radioButton_doge = new System.Windows.Forms.RadioButton();
 			this.radioButton_evil_patrick = new System.Windows.Forms.RadioButton();
 			this.radioButton_excuse_me = new System.Windows.Forms.RadioButton();
-			this.radioButton_doge = new System.Windows.Forms.RadioButton();
 			this.tabPage_font_style = new System.Windows.Forms.TabPage();
 			this.button_size_down = new System.Windows.Forms.Button();
 			this.button_size_up = new System.Windows.Forms.Button();
@@ -53,6 +53,8 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.pictureBox_meme = new System.Windows.Forms.PictureBox();
 			this.label_meme = new System.Windows.Forms.Label();
+			this.button_export = new System.Windows.Forms.Button();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.tabControl1.SuspendLayout();
 			this.tabPage_image.SuspendLayout();
 			this.tableLayoutPanel_img.SuspendLayout();
@@ -70,19 +72,21 @@
 			this.tabControl1.Controls.Add(this.tabPage_font_style);
 			this.tabControl1.Controls.Add(this.tabPage_sentences);
 			this.tabControl1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.tabControl1.Location = new System.Drawing.Point(40, 27);
+			this.tabControl1.Location = new System.Drawing.Point(60, 40);
+			this.tabControl1.Margin = new System.Windows.Forms.Padding(60, 40, 60, 4);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(564, 166);
+			this.tabControl1.Size = new System.Drawing.Size(846, 249);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage_image
 			// 
 			this.tabPage_image.Controls.Add(this.tableLayoutPanel_img);
-			this.tabPage_image.Location = new System.Drawing.Point(4, 25);
+			this.tabPage_image.Location = new System.Drawing.Point(4, 32);
+			this.tabPage_image.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tabPage_image.Name = "tabPage_image";
-			this.tabPage_image.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage_image.Size = new System.Drawing.Size(556, 137);
+			this.tabPage_image.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabPage_image.Size = new System.Drawing.Size(838, 213);
 			this.tabPage_image.TabIndex = 0;
 			this.tabPage_image.Text = "image";
 			this.tabPage_image.UseVisualStyleBackColor = true;
@@ -96,35 +100,51 @@
 			this.tableLayoutPanel_img.Controls.Add(this.radioButton_doge, 0, 3);
 			this.tableLayoutPanel_img.Controls.Add(this.radioButton_evil_patrick, 0, 2);
 			this.tableLayoutPanel_img.Controls.Add(this.radioButton_excuse_me, 0, 1);
-			this.tableLayoutPanel_img.Location = new System.Drawing.Point(6, 6);
+			this.tableLayoutPanel_img.Location = new System.Drawing.Point(9, 9);
+			this.tableLayoutPanel_img.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tableLayoutPanel_img.Name = "tableLayoutPanel_img";
 			this.tableLayoutPanel_img.RowCount = 4;
 			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_img.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel_img.Size = new System.Drawing.Size(544, 125);
+			this.tableLayoutPanel_img.Size = new System.Drawing.Size(816, 188);
 			this.tableLayoutPanel_img.TabIndex = 1;
 			// 
 			// radioButton_just_do_it
 			// 
 			this.radioButton_just_do_it.AutoSize = true;
 			this.radioButton_just_do_it.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_just_do_it.Location = new System.Drawing.Point(3, 3);
+			this.radioButton_just_do_it.Location = new System.Drawing.Point(4, 4);
+			this.radioButton_just_do_it.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_just_do_it.Name = "radioButton_just_do_it";
-			this.radioButton_just_do_it.Size = new System.Drawing.Size(82, 20);
+			this.radioButton_just_do_it.Size = new System.Drawing.Size(119, 27);
 			this.radioButton_just_do_it.TabIndex = 0;
 			this.radioButton_just_do_it.TabStop = true;
 			this.radioButton_just_do_it.Text = "just_do_it";
 			this.radioButton_just_do_it.UseVisualStyleBackColor = true;
 			// 
+			// radioButton_doge
+			// 
+			this.radioButton_doge.AutoSize = true;
+			this.radioButton_doge.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.radioButton_doge.Location = new System.Drawing.Point(4, 109);
+			this.radioButton_doge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.radioButton_doge.Name = "radioButton_doge";
+			this.radioButton_doge.Size = new System.Drawing.Size(81, 27);
+			this.radioButton_doge.TabIndex = 3;
+			this.radioButton_doge.TabStop = true;
+			this.radioButton_doge.Text = "doge";
+			this.radioButton_doge.UseVisualStyleBackColor = true;
+			// 
 			// radioButton_evil_patrick
 			// 
 			this.radioButton_evil_patrick.AutoSize = true;
 			this.radioButton_evil_patrick.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_evil_patrick.Location = new System.Drawing.Point(3, 55);
+			this.radioButton_evil_patrick.Location = new System.Drawing.Point(4, 74);
+			this.radioButton_evil_patrick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_evil_patrick.Name = "radioButton_evil_patrick";
-			this.radioButton_evil_patrick.Size = new System.Drawing.Size(92, 20);
+			this.radioButton_evil_patrick.Size = new System.Drawing.Size(133, 27);
 			this.radioButton_evil_patrick.TabIndex = 2;
 			this.radioButton_evil_patrick.TabStop = true;
 			this.radioButton_evil_patrick.Text = "evil_patrick";
@@ -134,35 +154,25 @@
 			// 
 			this.radioButton_excuse_me.AutoSize = true;
 			this.radioButton_excuse_me.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_excuse_me.Location = new System.Drawing.Point(3, 29);
+			this.radioButton_excuse_me.Location = new System.Drawing.Point(4, 39);
+			this.radioButton_excuse_me.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_excuse_me.Name = "radioButton_excuse_me";
-			this.radioButton_excuse_me.Size = new System.Drawing.Size(113, 20);
+			this.radioButton_excuse_me.Size = new System.Drawing.Size(166, 27);
 			this.radioButton_excuse_me.TabIndex = 1;
 			this.radioButton_excuse_me.TabStop = true;
 			this.radioButton_excuse_me.Text = "excuse_me_wtf";
 			this.radioButton_excuse_me.UseVisualStyleBackColor = true;
-			// 
-			// radioButton_doge
-			// 
-			this.radioButton_doge.AutoSize = true;
-			this.radioButton_doge.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_doge.Location = new System.Drawing.Point(3, 81);
-			this.radioButton_doge.Name = "radioButton_doge";
-			this.radioButton_doge.Size = new System.Drawing.Size(57, 20);
-			this.radioButton_doge.TabIndex = 3;
-			this.radioButton_doge.TabStop = true;
-			this.radioButton_doge.Text = "doge";
-			this.radioButton_doge.UseVisualStyleBackColor = true;
 			// 
 			// tabPage_font_style
 			// 
 			this.tabPage_font_style.Controls.Add(this.button_size_down);
 			this.tabPage_font_style.Controls.Add(this.button_size_up);
 			this.tabPage_font_style.Controls.Add(this.tableLayoutPanel3);
-			this.tabPage_font_style.Location = new System.Drawing.Point(4, 25);
+			this.tabPage_font_style.Location = new System.Drawing.Point(4, 32);
+			this.tabPage_font_style.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tabPage_font_style.Name = "tabPage_font_style";
-			this.tabPage_font_style.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage_font_style.Size = new System.Drawing.Size(556, 137);
+			this.tabPage_font_style.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabPage_font_style.Size = new System.Drawing.Size(838, 213);
 			this.tabPage_font_style.TabIndex = 1;
 			this.tabPage_font_style.Text = "font style";
 			this.tabPage_font_style.UseVisualStyleBackColor = true;
@@ -170,9 +180,10 @@
 			// button_size_down
 			// 
 			this.button_size_down.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button_size_down.Location = new System.Drawing.Point(371, 72);
+			this.button_size_down.Location = new System.Drawing.Point(556, 108);
+			this.button_size_down.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.button_size_down.Name = "button_size_down";
-			this.button_size_down.Size = new System.Drawing.Size(120, 23);
+			this.button_size_down.Size = new System.Drawing.Size(180, 34);
 			this.button_size_down.TabIndex = 3;
 			this.button_size_down.Text = "Font Size -";
 			this.button_size_down.UseVisualStyleBackColor = true;
@@ -181,9 +192,10 @@
 			// button_size_up
 			// 
 			this.button_size_up.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button_size_up.Location = new System.Drawing.Point(371, 43);
+			this.button_size_up.Location = new System.Drawing.Point(556, 64);
+			this.button_size_up.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.button_size_up.Name = "button_size_up";
-			this.button_size_up.Size = new System.Drawing.Size(120, 23);
+			this.button_size_up.Size = new System.Drawing.Size(180, 34);
 			this.button_size_up.TabIndex = 2;
 			this.button_size_up.Text = "Font Size +";
 			this.button_size_up.UseVisualStyleBackColor = true;
@@ -198,21 +210,23 @@
 			this.tableLayoutPanel3.Controls.Add(this.radioButton_Italic, 1, 0);
 			this.tableLayoutPanel3.Controls.Add(this.radioButton_Regular, 0, 1);
 			this.tableLayoutPanel3.Controls.Add(this.radioButton_Underline, 1, 1);
-			this.tableLayoutPanel3.Location = new System.Drawing.Point(71, 43);
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(106, 64);
+			this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
 			this.tableLayoutPanel3.RowCount = 2;
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(270, 52);
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(405, 78);
 			this.tableLayoutPanel3.TabIndex = 1;
 			// 
 			// radioButton_Bold
 			// 
 			this.radioButton_Bold.AutoSize = true;
 			this.radioButton_Bold.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_Bold.Location = new System.Drawing.Point(3, 3);
+			this.radioButton_Bold.Location = new System.Drawing.Point(4, 4);
+			this.radioButton_Bold.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_Bold.Name = "radioButton_Bold";
-			this.radioButton_Bold.Size = new System.Drawing.Size(53, 20);
+			this.radioButton_Bold.Size = new System.Drawing.Size(76, 27);
 			this.radioButton_Bold.TabIndex = 0;
 			this.radioButton_Bold.TabStop = true;
 			this.radioButton_Bold.Text = "Bold";
@@ -223,9 +237,10 @@
 			// 
 			this.radioButton_Italic.AutoSize = true;
 			this.radioButton_Italic.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_Italic.Location = new System.Drawing.Point(138, 3);
+			this.radioButton_Italic.Location = new System.Drawing.Point(206, 4);
+			this.radioButton_Italic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_Italic.Name = "radioButton_Italic";
-			this.radioButton_Italic.Size = new System.Drawing.Size(54, 20);
+			this.radioButton_Italic.Size = new System.Drawing.Size(77, 27);
 			this.radioButton_Italic.TabIndex = 1;
 			this.radioButton_Italic.TabStop = true;
 			this.radioButton_Italic.Text = "Italic";
@@ -236,9 +251,10 @@
 			// 
 			this.radioButton_Regular.AutoSize = true;
 			this.radioButton_Regular.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_Regular.Location = new System.Drawing.Point(3, 29);
+			this.radioButton_Regular.Location = new System.Drawing.Point(4, 43);
+			this.radioButton_Regular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_Regular.Name = "radioButton_Regular";
-			this.radioButton_Regular.Size = new System.Drawing.Size(72, 20);
+			this.radioButton_Regular.Size = new System.Drawing.Size(102, 27);
 			this.radioButton_Regular.TabIndex = 2;
 			this.radioButton_Regular.TabStop = true;
 			this.radioButton_Regular.Text = "Regular";
@@ -249,9 +265,10 @@
 			// 
 			this.radioButton_Underline.AutoSize = true;
 			this.radioButton_Underline.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_Underline.Location = new System.Drawing.Point(138, 29);
+			this.radioButton_Underline.Location = new System.Drawing.Point(206, 43);
+			this.radioButton_Underline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_Underline.Name = "radioButton_Underline";
-			this.radioButton_Underline.Size = new System.Drawing.Size(84, 20);
+			this.radioButton_Underline.Size = new System.Drawing.Size(120, 27);
 			this.radioButton_Underline.TabIndex = 3;
 			this.radioButton_Underline.TabStop = true;
 			this.radioButton_Underline.Text = "Underline";
@@ -261,10 +278,11 @@
 			// tabPage_sentences
 			// 
 			this.tabPage_sentences.Controls.Add(this.tableLayoutPanel_sentence);
-			this.tabPage_sentences.Location = new System.Drawing.Point(4, 25);
+			this.tabPage_sentences.Location = new System.Drawing.Point(4, 32);
+			this.tabPage_sentences.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tabPage_sentences.Name = "tabPage_sentences";
-			this.tabPage_sentences.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage_sentences.Size = new System.Drawing.Size(556, 137);
+			this.tabPage_sentences.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabPage_sentences.Size = new System.Drawing.Size(838, 213);
 			this.tabPage_sentences.TabIndex = 2;
 			this.tabPage_sentences.Text = "sentences";
 			this.tabPage_sentences.UseVisualStyleBackColor = true;
@@ -278,23 +296,25 @@
 			this.tableLayoutPanel_sentence.Controls.Add(this.radioButton_mom, 0, 1);
 			this.tableLayoutPanel_sentence.Controls.Add(this.radioButton_the_moment, 0, 2);
 			this.tableLayoutPanel_sentence.Controls.Add(this.radioButton_professor, 0, 3);
-			this.tableLayoutPanel_sentence.Location = new System.Drawing.Point(6, 6);
+			this.tableLayoutPanel_sentence.Location = new System.Drawing.Point(9, 9);
+			this.tableLayoutPanel_sentence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tableLayoutPanel_sentence.Name = "tableLayoutPanel_sentence";
 			this.tableLayoutPanel_sentence.RowCount = 4;
 			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel_sentence.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel_sentence.Size = new System.Drawing.Size(544, 128);
+			this.tableLayoutPanel_sentence.Size = new System.Drawing.Size(816, 192);
 			this.tableLayoutPanel_sentence.TabIndex = 0;
 			// 
 			// radioButton_want_some
 			// 
 			this.radioButton_want_some.AutoSize = true;
 			this.radioButton_want_some.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_want_some.Location = new System.Drawing.Point(3, 3);
+			this.radioButton_want_some.Location = new System.Drawing.Point(4, 4);
+			this.radioButton_want_some.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_want_some.Name = "radioButton_want_some";
-			this.radioButton_want_some.Size = new System.Drawing.Size(137, 20);
+			this.radioButton_want_some.Size = new System.Drawing.Size(202, 27);
 			this.radioButton_want_some.TabIndex = 0;
 			this.radioButton_want_some.TabStop = true;
 			this.radioButton_want_some.Text = "Want Some Weed?";
@@ -304,9 +324,10 @@
 			// 
 			this.radioButton_mom.AutoSize = true;
 			this.radioButton_mom.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_mom.Location = new System.Drawing.Point(3, 29);
+			this.radioButton_mom.Location = new System.Drawing.Point(4, 39);
+			this.radioButton_mom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_mom.Name = "radioButton_mom";
-			this.radioButton_mom.Size = new System.Drawing.Size(195, 20);
+			this.radioButton_mom.Size = new System.Drawing.Size(292, 27);
 			this.radioButton_mom.TabIndex = 1;
 			this.radioButton_mom.TabStop = true;
 			this.radioButton_mom.Text = "Mom : how\'s midterm? You : ";
@@ -316,9 +337,10 @@
 			// 
 			this.radioButton_the_moment.AutoSize = true;
 			this.radioButton_the_moment.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_the_moment.Location = new System.Drawing.Point(3, 55);
+			this.radioButton_the_moment.Location = new System.Drawing.Point(4, 74);
+			this.radioButton_the_moment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_the_moment.Name = "radioButton_the_moment";
-			this.radioButton_the_moment.Size = new System.Drawing.Size(251, 20);
+			this.radioButton_the_moment.Size = new System.Drawing.Size(365, 27);
 			this.radioButton_the_moment.TabIndex = 2;
 			this.radioButton_the_moment.TabStop = true;
 			this.radioButton_the_moment.Text = "The moment she peeks at your phone";
@@ -328,9 +350,10 @@
 			// 
 			this.radioButton_professor.AutoSize = true;
 			this.radioButton_professor.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.radioButton_professor.Location = new System.Drawing.Point(3, 81);
+			this.radioButton_professor.Location = new System.Drawing.Point(4, 109);
+			this.radioButton_professor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.radioButton_professor.Name = "radioButton_professor";
-			this.radioButton_professor.Size = new System.Drawing.Size(261, 20);
+			this.radioButton_professor.Size = new System.Drawing.Size(389, 27);
 			this.radioButton_professor.TabIndex = 3;
 			this.radioButton_professor.TabStop = true;
 			this.radioButton_professor.Text = "Professor : This is a group project. You : ";
@@ -339,9 +362,10 @@
 			// button_random
 			// 
 			this.button_random.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.button_random.Location = new System.Drawing.Point(456, 199);
+			this.button_random.Location = new System.Drawing.Point(684, 298);
+			this.button_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.button_random.Name = "button_random";
-			this.button_random.Size = new System.Drawing.Size(144, 28);
+			this.button_random.Size = new System.Drawing.Size(216, 42);
 			this.button_random.TabIndex = 1;
 			this.button_random.Text = "random select";
 			this.button_random.UseVisualStyleBackColor = true;
@@ -353,21 +377,23 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel1.Controls.Add(this.pictureBox_meme, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.label_meme, 0, 0);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(40, 233);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 350);
+			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 406);
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(840, 609);
 			this.tableLayoutPanel1.TabIndex = 2;
 			// 
 			// pictureBox_meme
 			// 
 			this.pictureBox_meme.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.pictureBox_meme.Location = new System.Drawing.Point(3, 84);
+			this.pictureBox_meme.Location = new System.Drawing.Point(4, 126);
+			this.pictureBox_meme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.pictureBox_meme.Name = "pictureBox_meme";
-			this.pictureBox_meme.Size = new System.Drawing.Size(554, 319);
+			this.pictureBox_meme.Size = new System.Drawing.Size(831, 478);
 			this.pictureBox_meme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox_meme.TabIndex = 0;
 			this.pictureBox_meme.TabStop = false;
@@ -377,21 +403,43 @@
 			this.label_meme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label_meme.AutoSize = true;
 			this.label_meme.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-			this.label_meme.Location = new System.Drawing.Point(280, 23);
+			this.label_meme.Location = new System.Drawing.Point(420, 35);
+			this.label_meme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label_meme.Name = "label_meme";
-			this.label_meme.Size = new System.Drawing.Size(0, 34);
+			this.label_meme.Size = new System.Drawing.Size(0, 51);
 			this.label_meme.TabIndex = 1;
+			// 
+			// button_export
+			// 
+			this.button_export.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.button_export.Location = new System.Drawing.Point(60, 298);
+			this.button_export.Margin = new System.Windows.Forms.Padding(4);
+			this.button_export.Name = "button_export";
+			this.button_export.Size = new System.Drawing.Size(216, 42);
+			this.button_export.TabIndex = 3;
+			this.button_export.Text = "export meme";
+			this.button_export.UseVisualStyleBackColor = true;
+			this.button_export.Click += new System.EventHandler(this.button_export_Click);
+			// 
+			// saveFileDialog1
+			// 
+			this.saveFileDialog1.FileName = "new meme";
+			this.saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|PNG Files|*.png";
+			this.saveFileDialog1.Title = "Save meme";
 			// 
 			// Form1
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(657, 669);
+			this.AutoSize = true;
+			this.ClientSize = new System.Drawing.Size(986, 1004);
+			this.Controls.Add(this.button_export);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.button_random);
 			this.Controls.Add(this.tabControl1);
 			this.KeyPreview = true;
-			this.MinimumSize = new System.Drawing.Size(300, 300);
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.MinimumSize = new System.Drawing.Size(439, 422);
 			this.Name = "Form1";
 			this.Text = "meme generator";
 			this.tabControl1.ResumeLayout(false);
@@ -438,6 +486,8 @@
 		private System.Windows.Forms.RadioButton radioButton_professor;
 		private System.Windows.Forms.RadioButton radioButton_evil_patrick;
 		private System.Windows.Forms.RadioButton radioButton_doge;
+		private System.Windows.Forms.Button button_export;
+		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 	}
 }
 
